@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="p-0 bg-whitesmoke">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+        <script
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin="">
+        </script>
+    </head>
+    <body class="p-0 bg-inherit">
+        <div class="w-screen h-screen"> <!-- body container-->
+            <div class="bg-sky-500"> <!-- navbar container -->
+                <div class="flex flex-row bg-inherit"> <!-- navbar -->
+                    <div class="text-white p-4">Hi User!</div>
+                    <div class="text-white p-4 hover:bg-sky-700 cursor-pointer"><a href="index.html">Feed</a></div>
+                    <div class="text-white p-4 hover:bg-sky-700 cursor-pointer"><a href="qrs.html">QRs</a></div>
+                </div>
+            </div>
+            <div class="flex flex-row justify-center items-center">
+                <h1 class="text-gray-500 text-5xl pb-4 pt-4">Active QRs</h1>
+                <div class="text-sky-500 text-5xl pl-8">
+                    <i class="bi bi-patch-plus cursor-pointer p-2 pt-1 hover:bg-gray-200 rounded-full duration-500"></i>
+                </div>
+            </div>
+            <div class="flex flex-col items-center"> <!-- main body container -->
+                <div class="flex flex-row justify-center flex-wrap"> <!-- content container -->
+                    <div id="qr-1" class="p-4">
+                        <div class="flex flex-row justify-left rounded-lg drop-shadow-lg bg-white p-4"> <!-- QR container-->
+                            <div> <!-- map container -->
+                                <div id="map-1" class="w-64 h-64"></div> <!-- map widget -->
+                            </div>
+                            <div id="info-1" class="flex flex-col pl-4 justify-between"> <!-- info container -->
+                                <div class="flex flex-col justify-start">
+                                    <div id="info-1-lon" class="flex flex-row justify-left"> <!-- lon container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">Lon:</p>
+                                        <p class="text-md">37.985350</p>
+                                    </div>
+                                    <div id="info-1-lat" class="flex flex-row justify-left"> <!-- lat container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">Lat:</p>
+                                        <p class="text-md">23.721537</p>
+                                    </div>
+                                    <div id="info-1-id" class="flex flex-row justify-left"> <!-- id container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">ID:</p>
+                                        <p class="text-md">x0fa5467dd7</p>
+                                    </div>
+                                    <div id="info-1-stats" class="flex flex-row justify-left"> <!-- stats container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">Posts:</p>
+                                        <p class="text-md">16</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-row justify-end">
+                                    <i class="bi bi-trash text-sky-500 cursor-pointer text-xl hover:bg-gray-200 p-2 rounded-lg duration-500" onclick="reject(1)"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="qr-2" class="p-4">
+                        <div class="flex flex-row justify-left rounded-lg drop-shadow-lg bg-white p-4"> <!-- QR container-->
+                            <div> <!-- map container -->
+                                <div id="map-2" class="w-64 h-64"></div> <!-- map widget -->
+                            </div>
+                            <div id="info-2" class="flex flex-col pl-4 justify-between"> <!-- info container -->
+                                <div class="flex flex-col justify-start">
+                                    <div id="info-2-lon" class="flex flex-row justify-left"> <!-- lon container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">Lon:</p>
+                                        <p class="text-md">37.930901</p>
+                                    </div>
+                                    <div id="info-2-lat" class="flex flex-row justify-left"> <!-- lat container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">Lat:</p>
+                                        <p class="text-md">23.729380</p>
+                                    </div>
+                                    <div id="info-2-id" class="flex flex-row justify-left"> <!-- id container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">ID:</p>
+                                        <p class="text-md">xd78111aab</p>
+                                    </div>
+                                    <div id="info-2-stats" class="flex flex-row justify-left"> <!-- stats container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">Posts:</p>
+                                        <p class="text-md">29</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-row justify-end">
+                                    <i class="bi bi-trash text-sky-500 cursor-pointer text-xl hover:bg-gray-200 p-2 rounded-lg duration-500" onclick="reject(2)"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="qr-3" class="p-4">
+                        <div id="qr-3" class="flex flex-row justify-left rounded-lg drop-shadow-lg bg-white p-4"> <!-- QR container-->
+                            <div> <!-- map container -->
+                                <div id="map-3" class="w-64 h-64"></div> <!-- map widget -->
+                            </div>
+                            <div id="info-3" class="flex flex-col pl-4 justify-between"> <!-- info container -->
+                                <div class="flex flex-col justify-start">
+                                    <div id="info-3-lon" class="flex flex-row justify-left"> <!-- lon container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">Lon:</p>
+                                        <p class="text-md">37.972225</p>
+                                    </div>
+                                    <div id="info-3-lat" class="flex flex-row justify-left"> <!-- lat container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">Lat:</p>
+                                        <p class="text-md">23.660299</p>
+                                    </div>
+                                    <div id="info-3-id" class="flex flex-row justify-left"> <!-- id container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">ID:</p>
+                                        <p class="text-md">x00c6455a4f</p>
+                                    </div>
+                                    <div id="info-3-stats" class="flex flex-row justify-left"> <!-- stats container -->
+                                        <p class="font-bold text-md text-gray-500 pr-2">Posts:</p>
+                                        <p class="text-md">6</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-row justify-end">
+                                    <i class="bi bi-trash text-sky-500 cursor-pointer text-xl hover:bg-gray-200 p-2 rounded-lg duration-500" onclick="reject(3)"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            initMap("map-1", 37.985350, 23.721537, 14);
+            initMap("map-2", 37.930901, 23.729380, 14);
+            initMap("map-3", 37.972225, 23.660299, 14);
+            function initMap(mapID, lon, lat, zoom) {
+                let map = L.map(mapID).setView([lon, lat], zoom);
+                let marker = L.marker([lon, lat]).addTo(map);
+                L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoidm1hcmtvcyIsImEiOiJja3h1Z2t4aTEzeDZjMnF1YnZ3emkwcXNnIn0.2LKLVCQUqZahKHDCQvWd0A", {
+                    attribution: "Map data &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors, Imagery © <a href='https://www.mapbox.com/'>Mapbox</a>",
+                    maxZoom: 18,
+                    id: "mapbox/streets-v11",
+                    tileSize: 512,
+                    zoomOffset: -1,
+                    accessToken: "pk.eyJ1Ijoidm1hcmtvcyIsImEiOiJja3h1Z2t4aTEzeDZjMnF1YnZ3emkwcXNnIn0.2LKLVCQUqZahKHDCQvWd0A"
+                }).addTo(map);
+            }
+        </script>
+        <script>
+            function approve(index) {
+                const duration = 400;
+                const block = document.getElementById("qr-" + index);
+                block.style.transition = "opacity " + duration + "ms ease";
+                block.style.opacity = 0;
+                setTimeout(function() {
+                    block.parentNode.removeChild(block);
+                }, duration);
+                // block.remove();
+            }
+            function reject(index) {
+                approve(index);
+            }
+        </script>
+    </body>
+</html>
