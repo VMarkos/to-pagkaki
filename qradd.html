@@ -15,7 +15,7 @@
         </script>
     </head>
     <body class="p-0 bg-inherit">
-        <div class="w-screen h-screen flex flex-col"> <!-- body container-->
+        <div class="w-screen h-screen"> <!-- body container-->
             <div class="bg-sky-500"> <!-- navbar container -->
                 <div class="flex flex-row bg-inherit"> <!-- navbar -->
                     <div class="text-white p-4">Hi User!</div>
@@ -23,18 +23,24 @@
                     <div class="text-white p-4 hover:bg-sky-700 cursor-pointer"><a href="qrs.html">QRs</a></div>
                 </div>
             </div>
-            <div class="flex flex-col justify-center grow">
-                <div class="flex flex-row justify-center items-center">
-                    <h1 class="text-gray-500 text-5xl pb-4 pt-4">Log in</h1>
+            <div class="flex flex-row justify-center items-center">
+                <h1 class="text-gray-500 text-5xl pb-4 pt-4">Adding a QR...</h1>
+            </div>
+            <div class="flex flex-col items-center"> <!-- main body container -->
+                <div class="flex flex-col items-start pt-4"> <!-- lon container -->
+                    <div class="text-gray-500 font-bold text-xl">Lon:</div>
+                    <textarea id="lon" class="rounded-lg drop-shadow-md p-2 resize-none" rows=1 placeholder="Longtitude..."></textarea>
                 </div>
-                <div class="flex flex-col items-center"> <!-- main body container -->
-                    <div class="flex flex-col items-start pt-4"> <!-- id container -->
-                        <div class="text-gray-500 font-bold text-xl">API Key:</div>
-                        <textarea id="qr-id" class="rounded-lg drop-shadow-md p-2 resize-none" rows=1 placeholder="API Key..."></textarea>
-                    </div>
-                    <div class="flex flex-col items-end pt-8"> <!-- submit container -->
-                        <a href="feed.html"><div class="rounded-lg bg-sky-500 hover:bg-sky-700 duration-500 p-2 cursor-pointer text-white font-bold">Submit</div></a>
-                    </div>
+                <div class="flex flex-col items-start pt-4"> <!-- lat container -->
+                    <div class="text-gray-500 font-bold text-xl">Lat:</div>
+                    <textarea id="lat" class="rounded-lg drop-shadow-md p-2 resize-none" rows=1 placeholder="Latitude..."></textarea>
+                </div>
+                <div class="flex flex-col items-start pt-4"> <!-- id container -->
+                    <div class="text-gray-500 font-bold text-xl">ID:</div>
+                    <textarea id="qr-id" class="rounded-lg drop-shadow-md p-2 resize-none" rows=1 placeholder="QR id..."></textarea>
+                </div>
+                <div class="flex flex-col items-end pt-8"> <!-- submit container -->
+                    <div class="rounded-lg bg-sky-500 hover:bg-sky-700 duration-500 p-2 cursor-pointer text-white font-bold">Submit</div>
                 </div>
             </div>
         </div>

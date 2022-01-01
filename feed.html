@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="p-0 bg-whitesmoke">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="p-0 bg-inherit">
+        <div class="w-screen h-screen"> <!-- body container-->
+            <div class="w-screen bg-sky-500"> <!-- navbar container -->
+                <div class="flex bg-inherit"> <!-- navbar -->
+                    <div class="text-white p-4">Hi User!</div>
+                    <div class="text-white p-4 hover:bg-sky-700 cursor-pointer"><a href="feed.html">Feed</a></div>
+                    <div class="text-white p-4 hover:bg-sky-700 cursor-pointer"><a href="qrs.html">QRs</a></div>
+                </div>
+            </div>
+            <div class="flex flex-row justify-center">
+                <h1 class="text-gray-500 text-5xl pb-4 pt-4">Feed</h1>
+            </div>
+            <div class="flex justify-center"> <!-- main body container-->
+                <div class="flex flex-col align-items-left pt-4"> <!-- content container -->
+                    <div id="post-1" class="flex flex-col"> <!-- post object container-->
+                        <div class="flex flex-col p-2 rounded-lg drop-shadow-lg bg-white pt-4"> <!-- post container -->
+                            <div class="flex flex-col align-items-left pb-2"> <!-- tweet container-->
+                                <h2 class="font-bold text-2xl text-gray-500">Post</h2>
+                                <p class="max-w-lg">This is some random text that has no purpose other than demonstrating how amazing this page is!</p>
+                            </div>
+                            <div class="flex flex-row justify-left"> <!-- date container -->
+                                <p class="font-bold text-md text-gray-500 pr-2">Date:</p>
+                                <p class="text-md">2022-01-16, 16:56:44</p>
+                            </div>
+                            <div class="flex flex-row justify-left"> <!-- QR id container -->
+                                <p class="font-bold text-md text-gray-500 pr-2">QR id:</p>
+                                <p class="text-md">x0fa5467dd7</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row-reverse pt-2"> <!-- buttons container -->
+                            <div class="pl-2 pt-2 pb-2">
+                                <div class="bg-sky-500 rounded-lg pl-2 pr-2 pt-1 pb-1 hover:bg-sky-700 cursor-pointer text-white font-bold drop-shadow-md" onclick="approve(1)">Approve</div>
+                            </div>
+                            <div class="pt-2 pb-2">
+                                <div class="bg-white rounded-lg pl-2 pr-2 pt-1 pb-1 hover:bg-gray-200 cursor-pointer text-sky-500 font-bold drop-shadow-md" onclick="reject(1)">Reject</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="post-2" class="flex flex-col"> <!-- post object container-->
+                        <div class="flex flex-col p-2 rounded-lg drop-shadow-lg bg-white pt-4"> <!-- post container -->
+                            <div class="flex flex-col align-items-left pb-2"> <!-- tweet container-->
+                                <h2 class="font-bold text-2xl text-gray-500">Post</h2>
+                                <p class="max-w-lg">Oh! I cannot believe I was about to forget to mention the most important thing about this page! How stupid would that be of me, right?</p>
+                            </div>
+                            <div class="flex flex-row justify-left"> <!-- date container -->
+                                <p class="font-bold text-md text-gray-500 pr-2">Date:</p>
+                                <p class="text-md">2022-01-16, 16:59:23</p>
+                            </div>
+                            <div class="flex flex-row justify-left"> <!-- QR id container -->
+                                <p class="font-bold text-md text-gray-500 pr-2">QR id:</p>
+                                <p class="text-md">x0fa5467dd7</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row-reverse pt-2"> <!-- buttons container -->
+                            <div class="pl-2 pt-2 pb-2">
+                                <div class="bg-sky-500 rounded-lg pl-2 pr-2 pt-1 pb-1 hover:bg-sky-700 cursor-pointer text-white font-bold drop-shadow-md" onclick="approve(2)">Approve</div>
+                            </div>
+                            <div class="pt-2 pb-2">
+                                <div class="bg-white rounded-lg pl-2 pr-2 pt-1 pb-1 hover:bg-gray-200 cursor-pointer text-sky-500 font-bold drop-shadow-md" onclick="reject(2)">Reject</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="post-3" class="flex flex-col"> <!-- post object container-->
+                        <div class="flex flex-col p-2 rounded-lg drop-shadow-lg bg-white pt-4"> <!-- post container -->
+                            <div class="flex flex-col align-items-left pb-2"> <!-- tweet container-->
+                                <h2 class="font-bold text-2xl text-gray-500">Post</h2>
+                                <p class="max-w-lg">I mean, could you just imagine designing an entire page in order to tell you something and then just forgetting to tell you about that? What a blunder would that be! :O</p>
+                            </div>
+                            <div class="flex flex-row justify-left"> <!-- date container -->
+                                <p class="font-bold text-md text-gray-500 pr-2">Date:</p>
+                                <p class="text-md">2022-01-16, 17:21:29</p>
+                            </div>
+                            <div class="flex flex-row justify-left"> <!-- QR id container -->
+                                <p class="font-bold text-md text-gray-500 pr-2">QR id:</p>
+                                <p class="text-md">x0fddd5678</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row-reverse pt-2"> <!-- buttons container -->
+                            <div class="pl-2 pt-2 pb-2">
+                                <div class="bg-sky-500 rounded-lg pl-2 pr-2 pt-1 pb-1 hover:bg-sky-700 cursor-pointer text-white font-bold drop-shadow-md" onclick="approve(3)">Approve</div>
+                            </div>
+                            <div class="pt-2 pb-2">
+                                <div class="bg-white rounded-lg pl-2 pr-2 pt-1 pb-1 hover:bg-gray-200 cursor-pointer text-sky-500 font-bold drop-shadow-md" onclick="reject(3)">Reject</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="post-4" class="flex flex-col duration-400 ease-in"> <!-- post object container-->
+                        <div class="flex flex-col p-2 rounded-lg drop-shadow-lg bg-white pt-4"> <!-- post container -->
+                            <div class="flex flex-col align-items-left pb-2"> <!-- tweet container-->
+                                <h2 class="font-bold text-2xl text-gray-500">Post</h2>
+                                <p class="max-w-lg">You know, this could have been like these moments when you prepare so hard for an exam, only to find out that it has been cancelled by the time you arrive at the exam center.</p>
+                            </div>
+                            <div class="flex flex-row justify-left"> <!-- date container -->
+                                <p class="font-bold text-md text-gray-500 pr-2">Date:</p>
+                                <p class="text-md">2022-01-16, 18:32:07</p>
+                            </div>
+                            <div class="flex flex-row justify-left"> <!-- QR id container -->
+                                <p class="font-bold text-md text-gray-500 pr-2">QR id:</p>
+                                <p class="text-md">x0eefa89bc1</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row-reverse pt-2"> <!-- buttons container -->
+                            <div class="pl-2 pt-2 pb-2">
+                                <div class="bg-sky-500 rounded-lg pl-2 pr-2 pt-1 pb-1 hover:bg-sky-700 cursor-pointer text-white font-bold drop-shadow-md" onclick="approve(4)">Approve</div>
+                            </div>
+                            <div class="pt-2 pb-2">
+                                <div class="bg-white rounded-lg pl-2 pr-2 pt-1 pb-1 hover:bg-gray-200 cursor-pointer text-sky-500 font-bold drop-shadow-md" onclick="reject(4)">Reject</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="post-5" class="flex flex-col w-full"> <!-- post object container-->
+                        <div class="flex flex-col p-2 rounded-lg drop-shadow-lg bg-white pt-4"> <!-- post container -->
+                            <div class="flex flex-col basis-full align-items-left pb-2"> <!-- tweet container-->
+                                <h2 class="font-bold text-2xl text-gray-500">Post</h2>
+                                <p class="max-w-lg">But it isn't...</p>
+                            </div>
+                            <div class="flex flex-row justify-left"> <!-- date container -->
+                                <p class="font-bold text-md text-gray-500 pr-2">Date:</p>
+                                <p class="text-md">2022-01-16, 18:32:26</p>
+                            </div>
+                            <div class="flex flex-row justify-left"> <!-- QR id container -->
+                                <p class="font-bold text-md text-gray-500 pr-2">QR id:</p>
+                                <p class="text-md">x0eefa89bc1</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row-reverse pt-2"> <!-- buttons container -->
+                            <div class="pl-2 pt-2 pb-2">
+                                <div class="bg-sky-500 rounded-lg pl-2 pr-2 pt-1 pb-1 hover:bg-sky-700 cursor-pointer text-white font-bold drop-shadow-md" onclick="approve(5)">Approve</div>
+                            </div>
+                            <div class="pt-2 pb-2">
+                                <div class="bg-white rounded-lg pl-2 pr-2 pt-1 pb-1 hover:bg-gray-200 cursor-pointer text-sky-500 font-bold drop-shadow-md" onclick="reject(5)">Reject</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function approve(index) {
+                const duration = 400;
+                const block = document.getElementById("post-" + index);
+                block.style.transition = "opacity " + duration + "ms ease";
+                block.style.opacity = 0;
+                setTimeout(function() {
+                    block.parentNode.removeChild(block);
+                }, duration);
+                // block.remove();
+            }
+            function reject(index) {
+                approve(index);
+            }
+        </script>
+    </body>
+</html>
